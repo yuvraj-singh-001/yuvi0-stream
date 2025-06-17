@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuvi stream</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');body {
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.letter-y {
+  font-size: 15vw;
+  color: #e50914;
+  opacity: 0;
+  animation: fadeInY 2s ease forwards;
+}
+
+.rest-name {
+  font-size: 6vw;
+  color: #e50914;
+  opacity: 0;
+  animation: slideInRest 2s ease forwards;
+  animation-delay: 2.5s;
+  transform-origin: left;
+}
+
+@keyframes fadeInY {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRest {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .letter-y {
+    font-size: 25vw;
+  }
+
+  .rest-name {
+    font-size: 10vw;
+  }
+
+  .animation-container {
+    gap: 0.5vw;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="animation-container">
+    <div class="letter-y">Y</div>
+    <div class="rest-name">UVRAJ</div>
+  </div>  <audio autoplay>
+    <source src="nouveau-jingle-netflix.mp3" type="audio/mpej">
+    Your browser does not support the audio element.
+  </audio>  <script>
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 6000);
+  </script></body>
+</html>
